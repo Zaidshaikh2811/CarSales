@@ -14,9 +14,7 @@ const ShowMore = ({ pageNumber, isNext }: ShowMoreProps) => {
         router.push(newPatName)
 
     }
-    console.log("HELLO");
 
-    console.log(!isNext);
 
     return (
         <div className='w-full flex-center gap-5 mt-10'>
