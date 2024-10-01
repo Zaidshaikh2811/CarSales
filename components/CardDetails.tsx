@@ -5,6 +5,7 @@ import React, { Fragment } from 'react'
 
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
+import { generateCarImageUrl } from '@/utils'
 
 interface CarDetailsProps {
 
@@ -60,7 +61,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                     <div className='flex-1 flex flex-col gap-3'>
                                         <div className='relative 2-full h-40 bg-pattern bg-cover bg-center rounded-lg'>
                                             <Image
-                                                src="/hero.png"
+                                                src={generateCarImageUrl(car)}
 
                                                 className="object-contain"
                                                 alt="hero"
@@ -71,7 +72,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                         <div className='flex gap-3'>
                                             <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, "angle")}
 
                                                     className="object-contain"
                                                     alt="hero"
@@ -82,7 +83,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                             </div>
                                             <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, "angle")}
 
                                                     className="object-contain"
                                                     alt="hero"
@@ -93,7 +94,7 @@ const CardDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                                             </div>
                                             <div className='flex-1 relative w-full h-24 bg-primary-blue-100 rounded-lg'>
                                                 <Image
-                                                    src="/hero.png"
+                                                    src={generateCarImageUrl(car, "angle")}
 
                                                     className="object-contain"
                                                     alt="hero"
